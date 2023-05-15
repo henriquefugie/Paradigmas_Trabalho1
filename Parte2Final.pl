@@ -141,7 +141,7 @@ itens(cutelo).
 itens(zhonya).
 itens(morello).
 itens(dente).
-itens(abraco)).
+itens(abraco).
 itens(liandry).
 itens(shiojin).
 itens(hidra).
