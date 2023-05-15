@@ -126,6 +126,34 @@ item(natureza) :- write('Forca da Natureza').
 item(sterak) :- write('Sinal de Sterak').
 item(jaksho) :- write('JakSho').
 
+itens(eclipse).
+itens(manamune).
+itens(vendaval).
+itens(runaan).
+itens(gume).
+itens(medalhao).
+itens(juramento).
+itens(convergencia).
+itens(ruptor).
+itens(espinhos).
+itens(randuin).
+itens(cutelo).
+itens(zhonya).
+itens(morello).
+itens(dente).
+itens(abraco)).
+itens(liandry).
+itens(shiojin).
+itens(hidra).
+itens(danca).
+itens(trindade).
+itens(cimitarra).
+itens(couraca).
+itens(semblante).
+itens(natureza).
+itens(sterak).
+itens(jaksho).
+
 % -----------------------------------------------------
 
 % ----------------------- REGRAS -----------------------
@@ -337,6 +365,14 @@ campeoes_com_item(Item) :- verifica_campeoes_com_item(Item,Campeoes),
 
 verifica_campeoes_com_item(Item,Campeoes) :-
   findall(Campeao, (campeao(Campeao, _, _, _, Build, _), member(Item, Build)), Campeoes).
+
+todos_campeoes :-
+    findall(Nome, campeao(Nome, _, _, _, _, _), Campeoes),
+    write(Campeoes).
+    
+todos_itens :-
+    findall(Nome, itens(Nome), Itens),
+    write(Itens).
 
 % -----------------------------------------------------
 
